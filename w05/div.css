@@ -28,8 +28,8 @@ body {
 #heading ul {
   display: flex;
   list-style: none;
-  margin-top: 1rem;
-  padding-left: 5rem;
+  margin-top: 1.7rem;
+  padding-left: 2rem;
 }
 
 #heading li {
