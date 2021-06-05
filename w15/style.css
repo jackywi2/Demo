@@ -1,0 +1,203 @@
+@import url("https://fonts.googleapis.com/css?family=Ibarra+Real+Nova:400,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Archivo+Narrow&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: 'Ibarra Real Nova', serif;
+  background-color: #f9f2f2;
+  font-size: 1.3rem;
+}
+
+header {
+  display: -ms-grid;
+  display: grid;
+  width: 90vw;
+  margin: 2rem auto;
+}
+
+header .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: 'Archivo Narrow';
+}
+
+header .logo div {
+  padding: 0.5rem 0.8rem;
+  border: 0.2px solid rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: -0.3rem 0.3rem 0 0 rgba(0, 0, 0, 0.2);
+          box-shadow: -0.3rem 0.3rem 0 0 rgba(0, 0, 0, 0.2);
+}
+
+nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+}
+
+nav ul li {
+  padding: 1.8rem 1rem;
+}
+
+.search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (min-width: 768px) {
+  header {
+    grid-template-columns: repeat(3, 1fr);
+    -ms-grid-columns: 1fr 1fr 1fr;
+  }
+  header .logo {
+    -ms-grid-column-align: start;
+        justify-self: start;
+  }
+}
+
+:root {
+  /*   color variables */
+  --clr-primary: #304ffe;
+  --clr-primary-hover: #29e6a7;
+  --clr-primary-dark: #039d69;
+  --clr-gray100: #f0f7f8;
+  --clr-gray200: #cfd8dc;
+  --clr-gray300: #a7b7be;
+  --clr-gray400: #6b7e86;
+  --clr-gray500: #425a65;
+  /*   border radius */
+  --radius: 0.2rem;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  font-family: Montserrat, sans-serif;
+  margin: 2rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(25rem, 0.3fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(25rem, 0.3fr));
+  grid-gap: 2rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.card {
+  overflow: hidden;
+  border: 1px solid var(--clr-gray200);
+  -webkit-box-shadow: 4px 4px var(--clr-gray200);
+          box-shadow: 4px 4px var(--clr-gray200);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  cursor: pointer;
+  -webkit-transition: border 200ms ease-in, -webkit-box-shadow 200ms ease-in;
+  transition: border 200ms ease-in, -webkit-box-shadow 200ms ease-in;
+  transition: border 200ms ease-in, box-shadow 200ms ease-in;
+  transition: border 200ms ease-in, box-shadow 200ms ease-in, -webkit-box-shadow 200ms ease-in;
+}
+
+.card__image {
+  height: 20rem;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.card__title {
+  padding: 1rem;
+}
+
+.card__description {
+  padding: 0 1rem;
+}
+
+.card__link {
+  text-decoration: none;
+  padding: 1rem;
+  font-weight: bold;
+  color: var(--clr-primary);
+}
+
+.card__link::after {
+  content: "\f061";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  position: relative;
+  left: 0.5rem;
+}
+
+.card:hover {
+  border: 1px solid var(--clr-primary);
+  -webkit-box-shadow: 8px 8px var(--clr-primary);
+          box-shadow: 8px 8px var(--clr-primary);
+}
+
+.card:hover .card__link::after {
+  -webkit-animation: arrow 1s ease-in-out infinite alternate;
+          animation: arrow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes arrow {
+  0% {
+    left: 0.5rem;
+  }
+  100% {
+    left: 1.5rem;
+  }
+}
+
+@keyframes arrow {
+  0% {
+    left: 0.5rem;
+  }
+  100% {
+    left: 1.5rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */
